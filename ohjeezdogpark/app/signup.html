@@ -1,0 +1,36 @@
+﻿
+<!--<div class="col m6 input-field">
+    <div class="">
+        Create user name <input class="" value="Create Username" type="text" id="username" ng-model="Email" />
+    </div>
+    <div class="">
+        Create a password<input class="" value="Choose Password" type="password" id="password" ng-model="Password" />
+    </div>
+    <div class="">
+        Confirm passowrd <input class="" value="Confirm Password" type="password" id="password" ng-model="ConfirmPassword" />
+    </div>
+    <input value="Sign up" class="btn" ng-click="signup()" />
+</div>-->
+<div class="container" align="center">
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label gray text-left">Email</label>
+                    <div class="col-sm-9">
+                        <input type="text" ng-model="newUser.email" ng-required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label gray text-left">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" ng-model="newUser.password" ng-required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label gray text-left">Confirm Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" ng-model="newUser.passwordConfirm" ng-required class="form-control">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-warning" ng-click="signup(newUser)">Register</button>
+            </form>
+</div>
