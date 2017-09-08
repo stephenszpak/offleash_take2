@@ -2,19 +2,27 @@
 
 
 //routes
-app.config(["$routeProvider", function ($routeProvider) {
+app.config(["$routeProvider","$httpProvider", function ($routeProvider, $httpProvider) {
     $routeProvider
         .when("/",
         {
-            templateUrl: "app/login.html",
+            templateUrl: "app/partials/login.html",
             controller: "loginController"
         })
         .when("/signup",
         {
-            templateUrl: "/app/signup.html",
+            templateUrl: "/app/partials/signup.html",
             controller: "signupController"
         })
+        .when("/home",
+        {
+            templateUrl: "/app/partials/home.html",
+            controller: "homeController"
+        })
         .otherwise("/");
+
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 
 //token storage
