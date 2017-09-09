@@ -39,7 +39,8 @@ app.config(["$routeProvider","$httpProvider", function ($routeProvider, $httpPro
         .when("/home",
         {
             templateUrl: "/app/partials/home.html",
-            controller: "homeController"
+            controller: "homeController",
+            resolve: { isAuth }
         })
         .when("/contacts",
         {

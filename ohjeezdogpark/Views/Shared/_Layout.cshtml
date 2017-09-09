@@ -21,7 +21,7 @@
                 <ul class="nav navbar-nav">
                     <li ng-show="!checkAuth()"><a href="#!/login">Login</a></li>
                     <li ng-show="!checkAuth()"><a href="#!/signup">Register</a></li>
-                    <li ng-show="!checkAuth()"><a href="#!/home">Home/Search</a></li>
+                    <li ng-show="checkAuth()"><a href="#!/home">Home/Search</a></li>
                     <li ng-show="checkAuth()"><a href="#!/contacts">contacts</a></li>
                     <li ng-show="checkAuth()"><a href="#!/favorites">favorites</a></li>
                     <li ng-show="checkAuth()"><a ng-click="logout()">Logout</a></li>
