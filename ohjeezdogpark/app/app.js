@@ -19,6 +19,11 @@ app.config(["$routeProvider","$httpProvider", function ($routeProvider, $httpPro
             templateUrl: "/app/partials/home.html",
             controller: "homeController"
         })
+        .when("/contacts",
+        {
+            templateUrl: "/app/partials/contacts.html",
+            controller: "contactsController"
+        })
         .otherwise("/");
 
     $httpProvider.defaults.useXDomain = true;

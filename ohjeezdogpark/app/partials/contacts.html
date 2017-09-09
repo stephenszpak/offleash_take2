@@ -1,0 +1,57 @@
+﻿<div ng-repeat="contact in contactList">
+    <div class="card card-inverse">
+        <div class="card-block">
+            <h2 class="card-title">{{contact.DogName}}</h2>
+            <p>{{contact.OwnerFirstName}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addContact">Add Contact</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addContact" tabindex="-1" role="dialog" aria-labelledby="addContactLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><strong>Add Contact!</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Dogs Name</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="Dog Name" ng-model="contact.DogName" ng-required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Owners First Name</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="First Name" ng-model="contact.OwnerFirstName" ng-required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Owners Last Name</label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="Last Name" ng-model="contact.OwnerLastName" ng-required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Phone Number</label>
+                            <div class="col-10">
+                                <input class="form-control" type="tel" value="Phone Number" ng-model="contact.PhoneNumber" ng-required>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="addContact(contact)" data-dismiss="modal">Add Contact</button>
+            </div>
+        </div>
+    </div>
+</div>
