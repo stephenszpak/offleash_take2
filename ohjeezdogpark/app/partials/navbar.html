@@ -1,1 +1,22 @@
-﻿
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" ng-controller="navController">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <p class="navbar-text navbar-right">Signed in as whoever!</p>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-show="!checkAuth()"><a href="#!/login">Login</a></li>
+                    <li ng-show="!checkAuth()"><a href="#!/signup">Register</a></li>
+                    <li ng-show="checkAuth()"><a href="#!/home">Home/Search</a></li>
+                    <li ng-show="checkAuth()"><a href="#!/contacts">contacts</a></li>
+                    <li ng-show="checkAuth()"><a href="#!/favorites">favorites</a></li>
+                    <li ng-show="checkAuth()"><a ng-click="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

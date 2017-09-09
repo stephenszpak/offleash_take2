@@ -1,24 +1,28 @@
 ﻿
 <div class="container">
 
-    <form>
-        <div class="input-field">
-            <input id="parkSearch" class="controls" ng-model="query" type="text" autocomplete="on">
+    <div class="row">
+        <form>
+            <div class="input-field">
+                <input id="parkSearch" class="controls" ng-model="query" type="text" autocomplete="on">
+            </div>
+        </form>
+
+        <div class="row" ng-repeat="dogpark in markers">
+            <p>{{dogpark.title}}</p>
+            <p>{{dogpark.address}}</p>
+            <p>{{dogpark.rating}}</p>
+            <a href ng-click="viewLocation(dogpark)" data-target="details"><i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
+            <br />
         </div>
-    </form>
-
-    <div class="row" ng-repeat="dogpark in markers">
-        <p>{{dogpark.title}}</p>
-        <p>{{dogpark.address}}</p>
-        <p>{{dogpark.rating}}</p>
-        <a href ng-click="viewLocation(dogpark)" data-target="details"><i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
-        <br />
     </div>
-
-
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="map"></div>
+        </div>
+    </div>
     
         
-            <div id="map" style="overflow:visible"></div>
 
 
 </div>
