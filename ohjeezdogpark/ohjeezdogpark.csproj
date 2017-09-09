@@ -296,11 +296,13 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\contactsController.js" />
+    <Content Include="app\controllers\navController.js" />
     <Content Include="app\partials\contacts.html" />
     <Content Include="app\partials\home.html" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\partials\login.html" />
     <Content Include="app\controllers\loginController.js" />
+    <Content Include="app\partials\navbar.html" />
     <Content Include="app\partials\signup.html" />
     <Content Include="app\controllers\signupController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />

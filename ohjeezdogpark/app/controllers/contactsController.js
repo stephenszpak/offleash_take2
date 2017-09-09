@@ -10,9 +10,8 @@
     $scope.addContact = function () {
         $http.post('api/contact', $scope.contact)
         .then(function () {
-            $scope.contact = {};
             $location.path('/contacts');
-
+            $scope.contact = {};
         });
     }
 

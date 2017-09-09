@@ -1,7 +1,6 @@
 ﻿app.controller("loginController", ["$scope", "$http", "$location", function ($scope, $http, $location) {
-    $scope.username = "a@a.com";
+    $scope.email = "a@a.com";
     $scope.password = "!heY123";
-
     $scope.login = function () {
         $http({
             method: 'POST',
@@ -13,16 +12,13 @@
                     str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                 return str.join("&");
             },
-            data: { grant_type: "password", username: $scope.username, password: $scope.password }
+            data: { grant_type: "password", userName: $scope.email, password: $scope.password }
         })
             .then(function (result) {
-                console.log("result=", result);
-
-                sessionStorage.setItem("token", result.data.access_token);
-
-                $http.defaults.headers.common["Authorization"] = `bearer ${result.data.access_token}`;
-
+                sessionStorage.setItem('token', result.data.access_token);
+                $http.defaults.headers.common['Authorization'] = `bearer ${result.data.access_token}`;
                 $location.path("/home");
             });
-    };
-}]);
+    }
+}
+]);
