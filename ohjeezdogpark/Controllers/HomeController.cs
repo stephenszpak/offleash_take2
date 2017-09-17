@@ -10,7 +10,7 @@ namespace ohjeezdogpark.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Off Leash";
 
             return View();
         }

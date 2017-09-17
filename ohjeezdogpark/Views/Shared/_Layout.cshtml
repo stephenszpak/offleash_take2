@@ -9,13 +9,14 @@
 </head>
 <body ng-app="OffLeash">
     
-    <div class="container body-content">
+    <div class="container-fluid">
         @RenderBody()
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Bbi2S3kDtm8HvRW4DxX1qN3VVf5iUsE&libraries=places" async defer></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
+    <script src="https://use.fontawesome.com/9b1d953e8d.js"></script>
 
     @RenderSection("scripts", required: false)
 </body>
